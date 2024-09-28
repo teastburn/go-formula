@@ -76,6 +76,11 @@ func (formula *Formula) Eval(variables ...Variable) (float64, error) {
 	return formula.evaluate(variableMap)
 }
 
+// Like Eval but without adding the constants, which saves considerable bytes
+func (formula *Formula) EvalWithoutConstants(v map[string]float64) (float64, error) {
+	return formula.evaluate(v)
+}
+
 // MustEval calls Eval but panics if Eval returns an error.
 func (formula *Formula) MustEval(variables ...Variable) float64 {
 	f, err := formula.Eval(variables...)
