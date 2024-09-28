@@ -65,6 +65,11 @@ func (formula *Formula) Eval(variables ...Variable) float64 {
 	return formula.evaluate(variableMap)
 }
 
+// Like Eval but without adding the constants, which saves considerable bytes
+func (formula *Formula) EvalWithoutConstants(v map[string]float64) (float64, error) {
+	return formula.evaluate(v)
+}
+
 // registerDefaults registers all functions found in the functions.go file to the formula. This is done for
 // each formula automatically, so these functions do not need to be added manually.
 func (formula *Formula) registerDefaults() {
