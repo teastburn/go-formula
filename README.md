@@ -1,4 +1,4 @@
-# go-formula [![GoDoc](http://godoc.org/github.com/Sandertv/go-formula?status.svg)](https://godoc.org/github.com/Sandertv/go-formula/v2)
+# go-formula [![GoDoc](http://godoc.org/github.com/teastburn/go-formula?status.svg)](https://godoc.org/github.com/teastburn/go-formula/v2)
 A simple and fast formula parser and evaluator.
 
 ## Getting Started
@@ -12,7 +12,7 @@ recommended to parse once and evaluate the same formula multiple times where app
 package main
 
 import (
-	"github.com/sandertv/go-formula/v2"
+	"github.com/teastburn/go-formula/v2"
 	"log"
 )
 
@@ -29,4 +29,4 @@ func main() {
 ```
 
 ### Documentation
-https://godoc.org/github.com/Sandertv/go-formula/v2
+https://godoc.org/github.com/teastburn/go-formula/v2
